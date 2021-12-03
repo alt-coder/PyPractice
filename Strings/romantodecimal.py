@@ -32,14 +32,14 @@ def RomanToDecimal(roman):
     D = 500,
     M = 1000
     )
-    rank=dict({'I':1},
-    V = 2,
-    X = 3,
-    L = 4,
-    C = 5,
-    D = 6,
-    M = 7
-    )
+    # rank=dict({'I':1},
+    # V = 2,
+    # X = 3,
+    # L = 4,
+    # C = 5,
+    # D = 6,
+    # M = 7
+    # )
     res=0
     for i,ch in enumerate(roman):
         if i == 0: res+=value[ch]
