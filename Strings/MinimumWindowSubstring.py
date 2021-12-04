@@ -1,14 +1,17 @@
 '''Idea
 Step 1 create a count of all character from pattern and a unique cnt variable for disticnt charaters
-Step 2 read the given string and decrement the count as the character you read
+Step 2 read the given string and decrement the count as the character you read from the given string
 if total count of character is zero decrement cnt variable signifying that we have read all the 
 characters of pattern in the given string
 if cnt ==0
-measure the length of the string read and store if minimum
-gradually move the left pointer while incrementing the character count in the string(the count mostly is negative
-for the string not in pattern zero for the characters in pattern)
-So if a charater from the left is removed that is in pattern then its count value is 1 therefore 
-we increment cnt variable to say that we require that character and right pointer is incremented till
+measure the length of the string that had been read and store it if minimum
+gradually move the left pointer while incrementing the character count(char at left left pointer)
+in the string(the count mostly is negative
+for the string not in pattern
+and zero for the characters in pattern)
+So if a charater from the left is removed that is in pattern then its count value is 1(after increment) therefore 
+we increment cnt variable to say that we require "that removed" character 
+hence right pointer is incremented till
 that character is found 
 '''
 
