@@ -61,6 +61,26 @@ def longestpeak(arr):
         
         
 
+def longestMountain(arr) -> int:
+    res = 0
+    curMT = 0
+    slope = 0
+    for i in range(len(arr)-1):
+        if arr[i] < arr[i+1]:
+            if slope == 1:
+                curMT +=1       #as slope is posive keep on add
+            else:
+                curMT = 2       #we have taken first up step
+            slope = 1
+        elif arr[i] > arr[i+1]:
+            if curMT > 1:       #current height >1 meaning we were clibing mountain
+                curMT += 1      #therefore keep on incrementing
+                res = max(res, curMT)
+            slope = -1          #slope is negative now
+        else:
+            curMT = 0
+            slope = 0
+    return res
 
 
 arr = [2,1,4,7,3,2,5]
